@@ -9,10 +9,15 @@ public class Driver {
         System.out.println();
 
 //        PayPal payment gateway
-        paymentGateway = new PayPalPaymentGatewayAdapter(new PayPal(1000,
+        paymentGateway = new PayPalPaymentGatewayAdapter(new PayPal(100,
                 "mikeHarris123@gmail.com"));
         paymentGateway.makePayment();
         System.out.println();
 
+//        Square payment gateway
+        paymentGateway = new SquarePaymentGatewayAdapter(new Square(250,
+                "1455 Market Street, San Francisco, CA 94103"));
+        paymentGateway.makePayment();
+        System.out.println();
     }
 }
